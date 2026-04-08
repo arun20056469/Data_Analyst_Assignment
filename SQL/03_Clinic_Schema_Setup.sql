@@ -32,7 +32,7 @@ CREATE TABLE expenses (
     FOREIGN KEY (cid) REFERENCES clinics(cid)
 );
 
--- Sample Data
+
 INSERT INTO clinics VALUES 
 ('c1', 'Wellness Clinic', 'New York', 'NY', 'USA'),
 ('c2', 'HealthCity', 'New York', 'NY', 'USA'),
@@ -47,7 +47,7 @@ INSERT INTO clinic_sales VALUES
 ('s1', 'cust1', 'c1', 5000, '2021-09-15 10:00:00', 'Online'),
 ('s2', 'cust2', 'c1', 3000, '2021-09-16 11:00:00', 'Walk-in'),
 ('s3', 'cust1', 'c2', 2000, '2021-09-15 12:00:00', 'Online'),
-('s4', 'cust1', 'c1', 1000, '2021-08-10 10:00:00', 'Online'); -- Previous month for testing
+('s4', 'cust1', 'c1', 1000, '2021-08-10 10:00:00', 'Online'); 
 
 INSERT INTO expenses VALUES 
 ('e1', 'c1', 'Supplies', 2000, '2021-09-01 09:00:00'),
