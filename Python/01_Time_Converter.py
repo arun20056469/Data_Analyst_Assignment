@@ -4,7 +4,7 @@ def convert_to_readable_time(minutes):
     Example: 130 -> "2 hrs 10 minutes"
     """
     try:
-        # Ensure input is integer
+     
         minutes = int(minutes)
         
         if minutes < 0:
@@ -13,7 +13,7 @@ def convert_to_readable_time(minutes):
         hours = minutes // 60
         remaining_minutes = minutes % 60
         
-        # Build the string parts
+      
         hour_part = ""
         if hours > 0:
             hour_part = f"{hours} hr" if hours == 1 else f"{hours} hrs"
@@ -21,8 +21,8 @@ def convert_to_readable_time(minutes):
         minute_part = ""
         if remaining_minutes > 0:
             minute_part = f"{remaining_minutes} minute" if remaining_minutes == 1 else f"{remaining_minutes} minutes"
-            
-        # Combine parts
+
+        
         if hours > 0 and remaining_minutes > 0:
             return f"{hour_part} {minute_part}"
         elif hours > 0:
