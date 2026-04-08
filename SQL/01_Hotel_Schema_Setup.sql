@@ -1,4 +1,4 @@
--- Create Database Schema for Hotel Management
+
 CREATE TABLE users (
     user_id VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100),
@@ -32,7 +32,7 @@ CREATE TABLE booking_commercials (
     FOREIGN KEY (item_id) REFERENCES items(item_id)
 );
 
--- Insert Sample Data for Testing
+
 INSERT INTO users VALUES 
 ('u101', 'John Doe', '9711111111', 'john@example.com', 'Street A'),
 ('u102', 'Jane Smith', '9722222222', 'jane@example.com', 'Street B'),
@@ -50,11 +50,10 @@ INSERT INTO bookings VALUES
 ('bk-003', '2021-10-10 09:00:00', 'R-101', 'u101'),
 ('bk-004', '2021-10-25 14:00:00', 'R-103', 'u103');
 
--- Insert Commercial Data (Bills)
--- Note: bill_ids bl-01 and bl-02 are in Oct, bl-03 is in Nov
+
 INSERT INTO booking_commercials VALUES 
-('c1', 'bk-003', 'bl-01', '2021-10-10 09:30:00', 'itm-001', 5),   -- Bill 90 (Oct)
-('c2', 'bk-003', 'bl-01', '2021-10-10 09:30:00', 'itm-003', 5),   -- Bill 1100 (Oct) -> Total 1190 > 1000
-('c3', 'bk-004', 'bl-02', '2021-10-25 14:30:00', 'itm-002', 2),   -- Bill 178 (Oct)
-('c4', 'bk-001', 'bl-03', '2021-11-05 10:30:00', 'itm-004', 10),  -- Nov Booking Item
-('c5', 'bk-002', 'bl-04', '2021-11-15 12:30:00', 'itm-003', 2);   -- Nov Booking Item
+('c1', 'bk-003', 'bl-01', '2021-10-10 09:30:00', 'itm-001', 5),   
+('c2', 'bk-003', 'bl-01', '2021-10-10 09:30:00', 'itm-003', 5),   
+('c3', 'bk-004', 'bl-02', '2021-10-25 14:30:00', 'itm-002', 2),   
+('c4', 'bk-001', 'bl-03', '2021-11-05 10:30:00', 'itm-004', 10),  
+('c5', 'bk-002', 'bl-04', '2021-11-15 12:30:00', 'itm-003', 2);   
